@@ -22,9 +22,6 @@ require_once \Bitrix\Main\Application::getDocumentRoot() . '/' . SITE_TEMPLATE_P
     $APPLICATION->IncludeComponent('lancy:cookie.accept', 'corporate-default', []);
 ?>
 
-<!-- Cookie Banner -->
-
-
 <!-- Header -->
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -32,28 +29,21 @@ require_once \Bitrix\Main\Application::getDocumentRoot() . '/' . SITE_TEMPLATE_P
             <a class="navbar-brand" href="/">
                 <i class="bi bi-building"></i> Компания
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            О компании
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about.html">О нас</a></li>
-                            <li><a class="dropdown-item" href="team.html">Команда</a></li>
-                            <li><a class="dropdown-item" href="history.html">История</a></li>
-                            <li><a class="dropdown-item" href="mission.html">Миссия и ценности</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cases.html">Кейсы</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-                </ul>
-            </div>
+            <?php
+             $APPLICATION->IncludeComponent(
+                 "bitrix:menu",
+                 "main-navigation",
+                 array(
+                     "ROOT_MENU_TYPE" => "top",
+                     "MENU_CACHE_TYPE" => "N",
+                     "MAX_LEVEL" => "2",
+                     "CHILD_MENU_TYPE" => "left",
+                     "USE_EXT" => "N",
+                     "DELAY" => "N"
+                 )
+             );
+
+            ?>
         </div>
     </nav>
 </header>

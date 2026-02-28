@@ -1,7 +1,7 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Главная - Корпоративный портал", 
+		"Главная",
 		"/index.php", 
 		Array(), 
 		Array(), 

@@ -1,11 +1,18 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"team", 
-		"/about/team/", 
+		"О нас",
+		"/about/",
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Наша команда",
+		"/about/team/",
+		Array(),
+		Array(),
+		""
 	),
 	Array(
 		"История", 
