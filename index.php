@@ -21,7 +21,7 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
                     </div>
                     <div class="col-lg-6">
                         <!-- Изображение-заглушка для главной (не Unsplash, а простой placeholder) -->
-                        <img src="https://placehold.co/600x400/0d6efd/ffffff?text=Корпоративные+порталы" alt="Корпоративные порталы и сайты" class="img-fluid rounded hero-image">
+                        <img src="https://pixnio.com/free-images/2017/07/30/2017-07-30-07-28-09-1000x667.jpg" alt="Корпоративные порталы и сайты" class="img-fluid rounded hero-image">
                     </div>
                 </div>
             </div>

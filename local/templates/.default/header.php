@@ -2,18 +2,17 @@
 B_PROLOG_INCLUDED === true || die();
 
 /** @var CMain $APPLICATION */
+
+require_once \Bitrix\Main\Application::getDocumentRoot() . '/' . SITE_TEMPLATE_PATH . '/include/init.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<?= LANGUAGE_ID ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php $APPLICATION->ShowTitle() ?></title>
-    <link rel="stylesheet" href="/local/templates/.default/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/local/templates/.default/css/bootstrap-icons.css">
-    <link rel="stylesheet" href="/local/templates/.default/css/style.css">
 
+    <title><?php $APPLICATION->ShowTitle() ?></title>
     <?php $APPLICATION->ShowHead(); ?>
 </head>
 <body>
