@@ -18,15 +18,12 @@ require_once \Bitrix\Main\Application::getDocumentRoot() . '/' . SITE_TEMPLATE_P
 <body>
 <?php $APPLICATION->ShowPanel(); ?>
 
-
+<?php
+    $APPLICATION->IncludeComponent('lancy:cookie.accept', 'corporate-default', []);
+?>
 
 <!-- Cookie Banner -->
-<div id="cookie-banner" class="cookie-banner">
-    <div class="cookie-banner__content">
-        <p>Мы используем cookie для улучшения работы сайта и анализа посещаемости.</p>
-        <button id="cookie-accept" class="btn btn-primary">Принять</button>
-    </div>
-</div>
+
 
 <!-- Header -->
 <header class="header">
