@@ -1,0 +1,63 @@
+<?php
+B_PROLOG_INCLUDED === true || die();
+
+/** @var CMain $APPLICATION */
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php $APPLICATION->ShowTitle() ?></title>
+    <link rel="stylesheet" href="/local/templates/.default/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/local/templates/.default/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/local/templates/.default/css/style.css">
+
+    <?php $APPLICATION->ShowHead(); ?>
+</head>
+<body>
+<?php $APPLICATION->ShowPanel(); ?>
+
+
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-banner__content">
+        <p>Мы используем cookie для улучшения работы сайта и анализа посещаемости.</p>
+        <button id="cookie-accept" class="btn btn-primary">Принять</button>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-building"></i> Компания
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            О компании
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">О нас</a></li>
+                            <li><a class="dropdown-item" href="team.html">Команда</a></li>
+                            <li><a class="dropdown-item" href="history.html">История</a></li>
+                            <li><a class="dropdown-item" href="mission.html">Миссия и ценности</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cases.html">Кейсы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
