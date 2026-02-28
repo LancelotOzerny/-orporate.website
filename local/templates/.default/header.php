@@ -12,6 +12,8 @@ require_once \Bitrix\Main\Application::getDocumentRoot() . '/' . SITE_TEMPLATE_P
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <title><?php $APPLICATION->ShowTitle() ?></title>
     <?php $APPLICATION->ShowHead(); ?>
 </head>
@@ -27,7 +29,17 @@ require_once \Bitrix\Main\Application::getDocumentRoot() . '/' . SITE_TEMPLATE_P
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <i class="bi bi-building"></i> Компания
+                <i class="bi bi-building"></i>
+                <?php
+                $APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        [
+                            "AREA_FILE_SHOW" => "file",
+                            "PATH" => "/local/include/header-company-name.php"
+                        ]
+                );
+                ?>
             </a>
             <?php
              $APPLICATION->IncludeComponent(
@@ -39,7 +51,8 @@ require_once \Bitrix\Main\Application::getDocumentRoot() . '/' . SITE_TEMPLATE_P
                      "MAX_LEVEL" => "2",
                      "CHILD_MENU_TYPE" => "left",
                      "USE_EXT" => "N",
-                     "DELAY" => "N"
+                     "DELAY" => "N",
+                     "ALLOW_MULTI_SELECT" => "Y",
                  )
              );
 
