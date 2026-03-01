@@ -12,16 +12,48 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0 text-lg-start">
-                        <h1 class="display-4 fw-bold mb-3">Лидер в корпоративных IT‑решениях</h1>
-                        <p class="lead mb-4">Создаем удобные и надежные решения для бизнеса на платформе 1С‑Битрикс и не только.</p>
+                        <h1 class="display-4 fw-bold mb-3">
+                            <?php
+                            $APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    [
+                                        "AREA_FILE_SHOW" => "file",
+                                        "PATH" => "/local/include/home/header/title.php"
+                                    ]
+                            );
+                            ?>
+                        </h1>
+                        <p class="lead mb-4">
+                            <?php
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                [
+                                    "AREA_FILE_SHOW" => "file",
+                                    "PATH" => "/local/include/home/header/slogan.php"
+                                ]
+                            );
+                            ?>
+                        </p>
                         <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
-                            <a href="services.html" class="btn btn-light btn-lg">Наши услуги</a>
-                            <a href="cases.html" class="btn btn-outline-light btn-lg">Посмотреть кейсы</a>
+                            <a href="/services/" class="btn btn-light btn-lg">Наши услуги</a>
+                            <a href="/cases/" class="btn btn-outline-light btn-lg">Посмотреть кейсы</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <!-- Изображение-заглушка для главной (не Unsplash, а простой placeholder) -->
-                        <img src="https://pixnio.com/free-images/2017/07/30/2017-07-30-07-28-09-1000x667.jpg" alt="Корпоративные порталы и сайты" class="img-fluid rounded hero-image">
+                        <?$APPLICATION->IncludeComponent(
+                            "lancy:Image",
+                            ".default",
+                            Array(
+                                "ALT" => "Корпоративные порталы",
+                                "COLLECTION" => "1",
+                                "COLLECTION_URL" => "/upload/medialibrary/101/h48dhbdempeyfs9qsumb23kdgrfi0em2.png",
+                                "COMPONENT_TEMPLATE" => ".default",
+                                "LINK_URL" => "https://hmarketing.ru/local/components/my_components/form.trigger/templates/.default/img/lisov-vadim.png",
+                                "TYPE" => "MEDIA_LIBRARY",
+                            )
+                        );?>
                     </div>
                 </div>
             </div>

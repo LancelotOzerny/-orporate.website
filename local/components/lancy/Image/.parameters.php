@@ -97,9 +97,9 @@ if ($arCurrentValues['TYPE'] === 'MEDIA_LIBRARY' && $arCurrentValues['COLLECTION
     ));
 
     foreach ($mediaItems as $item)
-        $arCollectionItems[$item['ID']] = "[{$item['ID']}] $item[NAME]";
+        $arCollectionItems[$item['PATH']] = "[{$item['ID']}] $item[NAME]";
 
-    $arComponentParameters['PARAMETERS']['COLLECTION_ITEM'] = [
+    $arComponentParameters['PARAMETERS']['COLLECTION_URL'] = [
         'PARENT' => 'BASE',
         'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.COLLECTION_ITEM'),
         'TYPE' => 'LIST',
