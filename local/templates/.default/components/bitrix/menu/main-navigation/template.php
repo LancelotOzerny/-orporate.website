@@ -34,12 +34,12 @@ foreach ($arResult as $item)
     if($item['IS_PARENT'])
     {
         echo "<li class='nav-item dropdown'>";
-        echo "<a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>О компании</a>";
+        echo "<a class='nav-link dropdown-toggle {$strActiveClass}' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>О компании</a>";
         echo '<ul class="dropdown-menu">';
     }
     else if ($depth > 2)
     {
-        echo "<li><a class='dropdown-item' href='{$url}'>{$text}</a></li>";
+        echo "<li><a class='dropdown-item {$strActiveClass}' href='{$url}'>{$text}</a></li>";
     }
     else
     {
