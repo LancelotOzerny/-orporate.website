@@ -50,7 +50,6 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
                                 "COLLECTION" => "1",
                                 "COLLECTION_URL" => "/upload/medialibrary/101/h48dhbdempeyfs9qsumb23kdgrfi0em2.png",
                                 "COMPONENT_TEMPLATE" => ".default",
-                                "LINK_URL" => "https://hmarketing.ru/local/components/my_components/form.trigger/templates/.default/img/lisov-vadim.png",
                                 "TYPE" => "MEDIA_LIBRARY",
                             )
                         );?>
@@ -133,7 +132,21 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="https://placehold.co/500x400/6c757d/ffffff?text=Команда+специалистов" alt="Наши специалисты" class="img-fluid rounded shadow">
+                        <?$APPLICATION->IncludeComponent(
+	"lancy:Image", 
+	".default", 
+	[
+		"ALT" => "Корпоративные порталы",
+		"COMPONENT_TEMPLATE" => ".default",
+		"LINK_URL" => "https://img.freepik.com/premium-photo/group-businesspeople-talking-near-table-with-laptop-cups-isolated-white_488220-42683.jpg?semt=ais_hybrid&w=740",
+		"TYPE" => "MEDIA_LIBRARY",
+		"WIDTH" => "90%",
+		"HEIGHT" => "",
+		"COLLECTION" => "1",
+		"COLLECTION_URL" => "/upload/medialibrary/b8c/gns4ej5yta49ztnhn2ne9jqa7frwg2j4.png"
+	],
+	false
+);?>
                     </div>
                     <div class="col-lg-6">
                         <h2 class="mb-4">Команда профессионалов</h2>

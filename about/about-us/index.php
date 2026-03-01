@@ -15,7 +15,17 @@ $APPLICATION->SetTitle("О нас");
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" alt="Офис компании" class="img-fluid rounded shadow">
+              <?$APPLICATION->IncludeComponent(
+                      "lancy:Image",
+                      ".default",
+                      Array(
+                          "ALT" => "Корпоративные порталы",
+                          "COLLECTION" => "1",
+                          "COLLECTION_URL" => "/upload/medialibrary/43f/l7b5mv187hrbhhj63lnrxsqtftk8hlpr.png",
+                          "COMPONENT_TEMPLATE" => ".default",
+                          "TYPE" => "MEDIA_LIBRARY",
+                      )
+              );?>
           </div>
           <div class="col-lg-6">
             <h2 class="mb-4">Профессиональные IT-решения с 2010 года</h2>
