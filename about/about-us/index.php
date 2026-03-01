@@ -1,6 +1,6 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("О нас");
+$APPLICATION->SetTitle("О компании");
 ?>
 <!-- About Section -->
 <section class="section">
@@ -8,16 +8,19 @@ $APPLICATION->SetTitle("О нас");
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
           <?$APPLICATION->IncludeComponent(
-              "lancy:Image",
-              ".default",
-              Array(
-                  "ALT" => "Корпоративные порталы",
-                  "COLLECTION" => "1",
-                  "COLLECTION_URL" => "/upload/medialibrary/43f/l7b5mv187hrbhhj63lnrxsqtftk8hlpr.png",
-                  "COMPONENT_TEMPLATE" => ".default",
-                  "TYPE" => "MEDIA_LIBRARY",
-              )
-          );?>
+	"lancy:Image", 
+	".default", 
+	[
+		"ALT" => "",
+		"COLLECTION" => "1",
+		"COLLECTION_URL" => "/upload/medialibrary/4f4/o4a0hc6ct2uyfh0bi9nxvw0kf4imgzqb.jpg",
+		"COMPONENT_TEMPLATE" => ".default",
+		"TYPE" => "MEDIA_LIBRARY",
+		"WIDTH" => "100%",
+		"HEIGHT" => ""
+	],
+	false
+);?>
       </div>
       <div class="col-lg-6">
         <h2 class="mb-4">Профессиональные IT-решения с 2010 года</h2>
