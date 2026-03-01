@@ -36,7 +36,7 @@ require_once \Bitrix\Main\Application::getDocumentRoot() . '/' . SITE_TEMPLATE_P
                         "",
                         [
                             "AREA_FILE_SHOW" => "file",
-                            "PATH" => "/local/include/header-company-name.php"
+                            "PATH" => "/local/include/header/header-company-name.php"
                         ]
                 );
                 ?>
