@@ -1,5 +1,6 @@
 <?php B_PROLOG_INCLUDED === true || die(); ?>
 
+
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
@@ -50,9 +51,3 @@
         </div>
     </div>
 </footer>
-
-<script src="/local/templates/.default/js/jquery-3.6.0.min.js"></script>
-<script src="/local/templates/.default/js/bootstrap.bundle.min.js"></script>
-<script src="/local/templates/.default/js/script.js"></script>
-</body>
-</html>
