@@ -9,15 +9,15 @@ use Bitrix\Main\Localization\Loc;
 $arComponentParameters = [
     'GROUPS' => [
         'BASE' => [
-            'NAME' => 'Базовые параметры',
+            'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.GROUP_BASE'),
             'SORT' => 100,
         ],
         'CHOOSE' => [
-            'NAME' => 'Выбор изображения',
+            'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.GROUP_CHOOSE'),
             'SORT' => 200,
         ],
         'VISUAL' => [
-            'NAME' => 'Внешний вид',
+            'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.GROUP_VISUAL'),
             'SORT' => 300
         ],
     ],
@@ -25,29 +25,29 @@ $arComponentParameters = [
     'PARAMETERS' => [
         'TYPE' => [
             'PARENT' => 'BASE',
-            'NAME' => 'Тип изображения',
+            'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.TYPE_NAME'),
             'TYPE' => 'LIST',
             'REFRESH' => 'Y',
             'VALUES' => [
-                'LINK' => 'Ссылка',
-                'MEDIA_LIBRARY' => 'Медиабиблиотека',
+                'LINK' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.TYPE_VALUE_LINK'),
+                'MEDIA_LIBRARY' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.TYPE_VALUE_MEDIA'),
             ]
         ],
         'ALT' => [
             'PARENT' => 'VISUAL',
-            'NAME' => 'Заголовок',
+            'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.ALT_NAME'),
             'TYPE' => 'STRING',
             'VALUE' => '',
         ],
         'WIDTH' => [
             'PARENT' => 'VISUAL',
-            'NAME' => 'Ширина',
+            'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.WIDTH_NAME'),
             'TYPE' => 'STRING',
             'VALUE' => '',
         ],
         'HEIGHT' => [
             'PARENT' => 'VISUAL',
-            'NAME' => 'Высота',
+            'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.HEIGHT_NAME'),
             'TYPE' => 'STRING',
             'VALUE' => '',
         ],
@@ -65,7 +65,7 @@ if ($arCurrentValues['TYPE'] === 'MEDIA_LIBRARY')
 {
     $collections = CMedialibCollection::GetList();
     $arCollectionsList = [
-        '0' => 'Не выбрано'
+        '0' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.NOT_CHOOSE'),
     ];
 
     foreach ($collections as $collection)
@@ -73,7 +73,7 @@ if ($arCurrentValues['TYPE'] === 'MEDIA_LIBRARY')
 
     $arComponentParameters['PARAMETERS']['COLLECTION'] = [
         'PARENT' => 'BASE',
-        'NAME' => 'Коллекция',
+        'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.COLLECTION.NAME'),
         'TYPE' => 'LIST',
         'VALUES' => $arCollectionsList,
         'REFRESH' => 'Y',
@@ -88,7 +88,7 @@ if ($arCurrentValues['TYPE'] === 'MEDIA_LIBRARY')
 if ($arCurrentValues['TYPE'] === 'MEDIA_LIBRARY' && $arCurrentValues['COLLECTION'] > 0)
 {
     $arCollectionItems = [
-        '0' => 'Не выбрано'
+        '0' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.NOT_CHOOSE'),
     ];
 
     $mediaItems = CMedialibItem::GetList(array(
@@ -101,7 +101,7 @@ if ($arCurrentValues['TYPE'] === 'MEDIA_LIBRARY' && $arCurrentValues['COLLECTION
 
     $arComponentParameters['PARAMETERS']['COLLECTION_ITEM'] = [
         'PARENT' => 'BASE',
-        'NAME' => 'Коллекция',
+        'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.COLLECTION_ITEM'),
         'TYPE' => 'LIST',
         'VALUES' => $arCollectionItems,
     ];
@@ -114,7 +114,7 @@ if ($arCurrentValues['TYPE'] === 'LINK')
 {
     $arComponentParameters['PARAMETERS']['LINK_URL'] = [
         'PARENT' => 'BASE',
-        'NAME' => 'Ссылка на изображение',
+        'NAME' => Loc::getMessage('IMAGE.COMPONENT.PARAMS.LINK_URL_NAME'),
         'TYPE' => 'STRING,'
     ];
 }
