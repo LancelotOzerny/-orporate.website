@@ -5,47 +5,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
 $APPLICATION->SetTitle("Главная - Корпоративный портал");
 ?>
-<!-- Статистика (цифры компании) -->
-<section class="section bg-light">
-    <div class="container">
-        <h2 class="section_title">Компания в цифрах</h2>
-
-        <?php
-        $APPLICATION->IncludeComponent(
-            "lancy:content.block",
-            "digitals",
-            [
-                "COMPONENT_TEMPLATE" => "digitals",
-                "IBLOCK_TYPE" => "site_content",
-                "IBLOCK_ID" => "3",
-                "SECTION_ID" => "3"
-            ],
-            false
-        );
-        ?>
-    </div>
-</section>
-
-<!-- Преимущества -->
-<section class="section">
-    <div class="container">
-        <h2 class="section_title">Почему клиенты выбирают нас</h2>
-        <?php
-        $APPLICATION->IncludeComponent(
-            "lancy:content.block",
-            "advantages",
-            [
-                "COMPONENT_TEMPLATE" => "digitals",
-                "IBLOCK_TYPE" => "site_content",
-                "IBLOCK_ID" => "2",
-                "SECTION_ID" => "1"
-            ],
-            false
-        );
-        ?>
-    </div>
-</section>
-
 <!-- Блок "Команда" -->
 <section class="section bg-light" id="team">
     <div class="container">
