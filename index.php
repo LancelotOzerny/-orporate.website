@@ -9,6 +9,10 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
 <section class="section bg-light">
     <div class="container">
         <h2 class="section_title">Компания в цифрах</h2>
+
+        <?php
+            $APPLICATION->IncludeComponent('bitrix:news', '.default', []);
+        ?>
         <div class="row g-4">
             <div class="col-md-3 col-sm-6">
                 <div class="stat-card">
@@ -46,8 +50,8 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="card-body text-center">
-                        <i class="bi bi-award card-icon"></i>
-                        <h3 class="card-title">Экспертиза</h3>
+                        <i class="bi bi- card-icon"></i>
+                        <h3 class="card-title"></h3>
                         <p class="card-text">15 лет опыта в разработке корпоративных порталов на 1С‑Битрикс.</p>
                     </div>
                 </div>
@@ -80,20 +84,20 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <?$APPLICATION->IncludeComponent(
-"lancy:Image",
-".default",
-[
-"ALT" => "Корпоративные порталы",
-"COMPONENT_TEMPLATE" => ".default",
-"LINK_URL" => "https://img.freepik.com/premium-photo/group-businesspeople-talking-near-table-with-laptop-cups-isolated-white_488220-42683.jpg?semt=ais_hybrid&w=740",
-"TYPE" => "MEDIA_LIBRARY",
-"WIDTH" => "90%",
-"HEIGHT" => "",
-"COLLECTION" => "1",
-"COLLECTION_URL" => "/upload/medialibrary/b8c/gns4ej5yta49ztnhn2ne9jqa7frwg2j4.png"
-],
-false
-);?>
+                    "lancy:Image",
+                    ".default",
+                    [
+                        "ALT" => "Корпоративные порталы",
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "LINK_URL" => "https://img.freepik.com/premium-photo/group-businesspeople-talking-near-table-with-laptop-cups-isolated-white_488220-42683.jpg?semt=ais_hybrid&w=740",
+                        "TYPE" => "MEDIA_LIBRARY",
+                        "WIDTH" => "90%",
+                        "HEIGHT" => "",
+                        "COLLECTION" => "1",
+                        "COLLECTION_URL" => "/upload/medialibrary/b8c/gns4ej5yta49ztnhn2ne9jqa7frwg2j4.png"
+                    ],
+                    false
+                );?>
             </div>
             <div class="col-lg-6">
                 <h2 class="mb-4">Команда профессионалов</h2>

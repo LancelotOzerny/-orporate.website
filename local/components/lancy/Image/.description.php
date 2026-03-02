@@ -9,7 +9,7 @@ $arComponentDescription = [
     'PATH' => [
         'ID' => 'Lancy',
         'CHILD' => [
-            'ID' => 'image',
+            'ID' => 'content',
             'NAME' => Loc::getMessage('IMAGE.COMPONENT.GROUP_NAME'),
         ]
     ],
