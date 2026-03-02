@@ -1,10 +1,17 @@
 <?php B_PROLOG_INCLUDED === true || die();
 
 /** @var array $arCurrentValues */
+use Bitrix\Main\Localization\Loc;
 
-$arIblockTypes = ['' => 'Не выбрано'];
-$arIblocks = [0 => 'Не выбрано'];
-$arIblockSections = [0 => 'Не выбрано'];
+Loc::loadMessages(__FILE__);
+
+$isCorrectType = $arCurrentValues['IBLOCK_TYPE'] ?: false;
+$isCorrectIBlock = $arCurrentValues['IBLOCK_ID'] ?: false;
+
+$arIblockTypes = ['' => Loc::getMessage('CONTENT_BLOCK.PARAMETERS.NOT_CHOOSE')];
+$arIblocks = $arIblockSections = [0 => Loc::getMessage('CONTENT_BLOCK.PARAMETERS.NOT_CHOOSE')];
+$arProperties = [];
+$arFields = [];
 
 if (!CModule::IncludeModule("iblock")) return;
 
@@ -19,9 +26,6 @@ while($ar_iblock_type = $db_iblock_type->Fetch())
 }
 
 /* =========================== IBLOCK LIST =========================== */
-$isCorrectType = $arCurrentValues['IBLOCK_TYPE'] ?: false;
-$isCorrectIBlock = $arCurrentValues['IBLOCK_ID'] ?: false;
-
 if ($isCorrectType)
 {
     $res = CIBlock::GetList(
@@ -39,14 +43,32 @@ if ($isCorrectType)
     }
 }
 
-/* =========================== IBLOCK LIST =========================== */
 if ($isCorrectType && $isCorrectIBlock)
 {
-    $res = CIBlockSection::GetList([], ['IBLOCK_ID' => $arCurrentValues['IBLOCK_ID'], 'ACTIVE' => 'Y'], false);
+    /* =========================== IBLOCK SECTION =========================== */
+    $res = CIBlockSection::GetList([], ['IBLOCK_ID' => $arCurrentValues['IBLOCK_ID']]);
 
     while($ar_res = $res->Fetch())
     {
         $arIblockSections[$ar_res['ID']] = "[{$ar_res['ID']}] {$ar_res['NAME']}";
+    }
+
+
+
+    /* =========================== IBLOCK PROPERTIES =========================== */
+    $rsProp = CIBlockProperty::GetList(
+        [
+            "SORT" => "ASC",
+            "NAME" => "ASC",
+        ],
+        [
+            "ACTIVE" => "Y",
+            "IBLOCK_ID" => $arCurrentValues["IBLOCK_ID"],
+        ]
+    );
+    while ($arr = $rsProp->Fetch())
+    {
+        $arProperties[$arr["CODE"]] = "[" . $arr["CODE"] . "] " . $arr["NAME"];
     }
 }
 
@@ -55,13 +77,18 @@ if ($isCorrectType && $isCorrectIBlock)
 $arComponentParameters = [
     'GROUPS' => [
         'SETTINGS' => [
-            'NAME' => 'Настройки компонента'
+            'NAME' => Loc::getMessage('CONTENT_BLOCK.PARAMETERS.GROUP_NAME.SETTINGS'),
+            'SORT' => 200
+        ],
+        'DATA_SOURCE' => [
+            'NAME' => Loc::getMessage('CONTENT_BLOCK.PARAMETERS.GROUP_NAME.DATA_SOURCE'),
+            'SORT' => 100
         ]
     ],
     "PARAMETERS" => [
         "IBLOCK_TYPE" => [
             "PARENT" => "SETTINGS",
-            "NAME" => "Тип инфоблока",
+            "NAME" => Loc::getMessage('CONTENT_BLOCK.PARAMETERS.PARAMETER.IBLOCK_TYPE'),
             "TYPE" => "LIST",
             "VALUES" => $arIblockTypes,
             "REFRESH" => "Y"
@@ -74,7 +101,7 @@ if ($isCorrectType)
 {
     $arComponentParameters["PARAMETERS"]["IBLOCK_ID"] = [
         "PARENT" => "SETTINGS",
-        "NAME" => "Инфоблок",
+        "NAME" => Loc::getMessage('CONTENT_BLOCK.PARAMETERS.PARAMETER.IBLOCK'),
         "TYPE" => "LIST",
         "VALUES" => $arIblocks,
         "REFRESH" => "Y",
@@ -85,8 +112,16 @@ if ($isCorrectType && $isCorrectIBlock)
 {
     $arComponentParameters["PARAMETERS"]["SECTION_ID"] = [
         "PARENT" => "SETTINGS",
-        "NAME" => "Раздел инфоблока",
+        "NAME" => Loc::getMessage('CONTENT_BLOCK.PARAMETERS.PARAMETER.IBLOCK_SECTION'),
         "TYPE" => "LIST",
         'VALUES' => $arIblockSections,
+    ];
+
+    $arComponentParameters['PARAMETERS']['IBLOCK_PROPERTIES'] = [
+        'PARENT' => 'DATA_SOURCE',
+        'NAME' => Loc::getMessage('CONTENT_BLOCK.PARAMETERS.PARAMETER.PROPERTIES'),
+        'TYPE' => 'LIST',
+        'MULTIPLE' => 'Y',
+        'VALUES' => $arProperties,
     ];
 }

@@ -1,12 +1,17 @@
-<?php
+<?php B_PROLOG_INCLUDED === true || die();
+
+use Bitrix\Main\Localization\Loc;
+
+Loc::loadMessages(__FILE__);
+
 $arComponentDescription = [
-    'NAME' => 'Элементы раздела',
-    'DESCRIPTION' => 'Выводит элементы из указанных разделов инфоблока',
+    'NAME' => Loc::getMessage('CONTENT_BLOCK.DESCRIPTION.NAME'),
+    'DESCRIPTION' => Loc::getMessage('CONTENT_BLOCK.DESCRIPTION.DESCRIPTION'),
     'PATH' => [
         'ID' => 'Lancy',
         'CHILD' => [
           'ID' => 'content',
-          'NAME' => 'Контент',
+          'NAME' => Loc::getMessage('CONTENT_BLOCK.DESCRIPTION.GROUP_NAME'),
         ],
     ]
 ];

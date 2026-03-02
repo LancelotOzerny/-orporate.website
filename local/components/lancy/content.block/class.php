@@ -16,8 +16,18 @@ class ContentBlockComponent extends CBitrixComponent
             return $arResult;
         }
 
+        echo '<pre>';
+        print_r($arParams);
+        echo '</pre>';
+
         if ($arResult['SECTION_ID'] && $arResult['IBLOCK_ID'] && $arResult['IBLOCK_TYPE'])
         {
+            $properties = [];
+            foreach ($arParams['IBLOCK_PROPERTIES'] ?? [] as $property)
+            {
+                $properties[] = 'PROPERTY_' . $property;
+            }
+
             $arFilter = [
                 "IBLOCK_ID" => $arResult['IBLOCK_ID'],
                 "SECTION_ID" => $arResult['SECTION_ID'],
@@ -26,7 +36,20 @@ class ContentBlockComponent extends CBitrixComponent
                 'INCLUDE_SUBSECTIONS' => 'Y'
             ];
 
-            $res = CIBlockElement::GetList(Array(), $arFilter);
+            $arSelect = array_merge($properties, [
+                "ID", "IBLOCK_ID", "IBLOCK_SECTION_ID", "NAME",
+                "ACTIVE_FROM", "TIMESTAMP_X",
+                "DETAIL_PAGE_URL", "LIST_PAGE_URL",
+                "DETAIL_TEXT", "DETAIL_TEXT_TYPE",
+                "PREVIEW_TEXT", "PREVIEW_TEXT_TYPE", "PREVIEW_PICTURE",
+            ]);
+
+
+            echo '<pre>';
+            print_r($properties);
+            echo '</pre>';
+
+            $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
             while($ob = $res->GetNextElement())
             {
                 $arResult['ITEMS'][] = $ob->GetFields();

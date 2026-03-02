@@ -30,35 +30,19 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
 <section class="section">
     <div class="container">
         <h2 class="section_title">Почему клиенты выбирают нас</h2>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi- card-icon"></i>
-                        <h3 class="card-title"></h3>
-                        <p class="card-text">15 лет опыта в разработке корпоративных порталов на 1С‑Битрикс.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-shield-check card-icon"></i>
-                        <h3 class="card-title">Безопасность</h3>
-                        <p class="card-text">Сертификация ISO 27001 и поддержка 24/7 для клиентов.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-rocket card-icon"></i>
-                        <h3 class="card-title">Инновации</h3>
-                        <p class="card-text">Использование облачных решений, AI‑интеграций и R&D‑центра.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+        $APPLICATION->IncludeComponent(
+            "lancy:content.block",
+            "advantages",
+            [
+                "COMPONENT_TEMPLATE" => "digitals",
+                "IBLOCK_TYPE" => "site_content",
+                "IBLOCK_ID" => "2",
+                "SECTION_ID" => "1"
+            ],
+            false
+        );
+        ?>
     </div>
 </section>
 
