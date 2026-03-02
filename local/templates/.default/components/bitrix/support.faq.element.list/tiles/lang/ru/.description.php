@@ -1,0 +1,3 @@
+<?php
+$MESS['COMPONENT.SUPPORT_FAQ_ELEMENT_LIST.TILES.NAME'] = 'FAQ в виде плиток';
+$MESS['COMPONENT.SUPPORT_FAQ_ELEMENT_LIST.TILES.DESC'] = 'Список вопросов FAQ в виде плиток';
