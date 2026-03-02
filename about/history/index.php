@@ -202,33 +202,20 @@ $APPLICATION->SetTitle("История компании");
     <section class="section">
       <div class="container">
         <h2 class="section_title">Наши достижения</h2>
-        <div class="row g-4">
-          <div class="col-md-3 col-sm-6">
-            <div class="stat-card">
-              <div class="stat-number">15</div>
-              <div class="stat-label">Лет на рынке</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="stat-card">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Реализованных проектов</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="stat-card">
-              <div class="stat-number">300+</div>
-              <div class="stat-label">Довольных клиентов</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="stat-card">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Специалистов в команде</div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+        <?php
+        $APPLICATION->IncludeComponent(
+          "lancy:content.block",
+          "digitals",
+          [
+              "COMPONENT_TEMPLATE" => "digitals",
+              "IBLOCK_TYPE" => "site_content",
+              "IBLOCK_ID" => "3",
+              "SECTION_ID" => "3"
+          ],
+          false
+        );
+        ?>
     </section>
 
     <!-- Awards Section -->
@@ -325,44 +312,19 @@ $APPLICATION->SetTitle("История компании");
     <section class="section bg-light">
       <div class="container">
         <h2 class="section_title">Планы на будущее</h2>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 text-center">
-              <div class="card-body">
-                <i class="bi bi-rocket card-icon"></i>
-                <h3 class="card-title">2027</h3>
-                <p class="card-text">Выход на международный рынок. Открытие представительств в странах СНГ</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 text-center">
-              <div class="card-body">
-                <i class="bi bi-cpu card-icon"></i>
-                <h3 class="card-title">2028</h3>
-                <p class="card-text">Запуск собственной платформы для low-code разработки корпоративных приложений</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 text-center">
-              <div class="card-body">
-                <i class="bi bi-people card-icon"></i>
-                <h3 class="card-title">2029</h3>
-                <p class="card-text">Расширение команды до 100+ специалистов. Открытие филиалов в 5 городах России</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 text-center">
-              <div class="card-body">
-                <i class="bi bi-graph-up card-icon"></i>
-                <h3 class="card-title">2030</h3>
-                <p class="card-text">Достижение лидерства в топ-5 интеграторов России. 1000+ успешных проектов</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
+          <?$APPLICATION->IncludeComponent(
+              "lancy:content.block",
+              "advantages",
+              Array(
+                  "COMPONENT_TEMPLATE" => "advantages",
+                  "ELEMENT_MODIFIER" => "col-lg-3 col-md-6",
+                  "IBLOCK_ID" => "2",
+                  "IBLOCK_PROPERTIES" => [0=>"UF_MODIFIER",],
+                  "IBLOCK_TYPE" => "site_content",
+                  "SECTION_ID" => "9"
+              )
+          );?>
       </div>
     </section>
 

@@ -304,35 +304,22 @@ $APPLICATION->SetTitle("Наша команда");
 <section class="section bg-light">
   <div class="container">
     <h2 class="section_title">Корпоративная культура</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <i class="bi bi-lightbulb card-icon"></i>
-            <h3 class="card-title">Обучение и развитие</h3>
-            <p class="card-text">Регулярные тренинги, конференции и курсы повышения квалификации за счет компании</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <i class="bi bi-people card-icon"></i>
-            <h3 class="card-title">Командная работа</h3>
-            <p class="card-text">Дружная атмосфера, корпоративные мероприятия и тимбилдинги</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <i class="bi bi-house card-icon"></i>
-            <h3 class="card-title">Гибкий график</h3>
-            <p class="card-text">Возможность удаленной работы и гибкое начало рабочего дня</p>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <?php
+    $APPLICATION->IncludeComponent(
+      "lancy:content.block",
+      "advantages",
+      [
+          "COMPONENT_TEMPLATE" => "advantages",
+          "IBLOCK_TYPE" => "site_content",
+          "IBLOCK_ID" => "2",
+          "SECTION_ID" => "7",
+          "IBLOCK_PROPERTIES" => [0=>"UF_MODIFIER",],
+          "ELEMENT_MODIFIER" => "col-lg-4 col-md-6"
+      ],
+      false
+    );
+    ?>
   </div>
 </section>
 
