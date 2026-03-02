@@ -16,10 +16,6 @@ class ContentBlockComponent extends CBitrixComponent
             return $arResult;
         }
 
-        echo '<pre>';
-        print_r($arParams);
-        echo '</pre>';
-
         if ($arResult['SECTION_ID'] && $arResult['IBLOCK_ID'] && $arResult['IBLOCK_TYPE'])
         {
             $properties = [];
@@ -43,11 +39,6 @@ class ContentBlockComponent extends CBitrixComponent
                 "DETAIL_TEXT", "DETAIL_TEXT_TYPE",
                 "PREVIEW_TEXT", "PREVIEW_TEXT_TYPE", "PREVIEW_PICTURE",
             ]);
-
-
-            echo '<pre>';
-            print_r($properties);
-            echo '</pre>';
 
             $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
             while($ob = $res->GetNextElement())
