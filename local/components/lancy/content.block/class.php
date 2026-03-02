@@ -48,7 +48,7 @@ class ContentBlockComponent extends CBitrixComponent
         }
 
         $this->arResult = $arResult;
-        return $arResult;
+        return $arParams;
     }
 
     public function executeComponent()

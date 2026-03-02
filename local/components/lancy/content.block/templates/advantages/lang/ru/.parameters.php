@@ -1,0 +1,2 @@
+<?php
+$MESS['CONTENT_BLOCK.TEMPLATE.ADVANTAGES.PARAM.ELEMENT_MODIFIER'] = 'Модификаторы элемента';
