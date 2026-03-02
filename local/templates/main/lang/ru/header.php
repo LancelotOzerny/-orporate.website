@@ -1,0 +1,3 @@
+<?php
+$MESS['TEMPLATE.MAIN.HEADER.BUTTON_OUR_SERVICES'] = 'Наши услуги';
+$MESS['TEMPLATE.MAIN.HEADER.BUTTON_SHOW_CASES'] = 'Посмотреть кейсы';

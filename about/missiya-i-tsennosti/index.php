@@ -1,15 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Миссия и ценности");
-?><!-- Main -->
-  <main class="main">
-    <!-- Page Banner -->
-    <section class="page-banner">
-      <div class="container">
-        <h1>Миссия и ценности</h1>
-      </div>
-    </section>
-
+?>
     <!-- Mission Section -->
     <section class="section">
       <div class="container">
@@ -259,4 +251,4 @@ $APPLICATION->SetTitle("Миссия и ценности");
         </div>
       </div>
     </section>
-  </main><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

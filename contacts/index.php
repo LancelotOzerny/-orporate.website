@@ -1,15 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Контакты");
-?><!-- Main -->
-  <main class="main">
-    <!-- Page Banner -->
-    <section class="page-banner">
-      <div class="container">
-        <h1>Контакты</h1>
-      </div>
-    </section>
-
+?>
     <!-- Contact Info Section -->
     <section class="section">
       <div class="container">
@@ -300,4 +292,4 @@ $APPLICATION->SetTitle("Контакты");
         </div>
       </div>
     </section>
-  </main><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

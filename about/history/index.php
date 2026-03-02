@@ -1,15 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("История");
-?><!-- Main -->
-  <main class="main">
-    <!-- Page Banner -->
-    <section class="page-banner">
-      <div class="container">
-        <h1>История компании</h1>
-      </div>
-    </section>
-
+$APPLICATION->SetTitle("История компании");
+?>
     <!-- Intro Section -->
     <section class="section">
       <div class="container">
@@ -389,4 +381,4 @@ $APPLICATION->SetTitle("История");
         </div>
       </div>
     </section>
-  </main><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

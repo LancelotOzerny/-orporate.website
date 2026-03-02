@@ -1,5 +1,5 @@
 <?
-$sSectionName = "team";
+$sSectionName = "Наша команда";
 $arDirProperties = Array(
 
 );

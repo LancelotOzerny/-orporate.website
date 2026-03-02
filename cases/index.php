@@ -1,15 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Кейсы");
-?><!-- Main -->
-  <main class="main">
-    <!-- Page Banner -->
-    <section class="page-banner">
-      <div class="container">
-        <h1>Наши кейсы</h1>
-      </div>
-    </section>
-
+?>
     <!-- Intro Section -->
     <section class="section">
       <div class="container">
@@ -361,7 +353,6 @@ $APPLICATION->SetTitle("Кейсы");
         <a href="index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
       </div>
     </section>
-  </main>
 
   <script>
     // Case filtering
@@ -380,4 +371,5 @@ $APPLICATION->SetTitle("Кейсы");
         }
       });
     });
-  </script><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+  </script>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

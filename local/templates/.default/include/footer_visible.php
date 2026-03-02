@@ -1,5 +1,5 @@
 <?php B_PROLOG_INCLUDED === true || die(); ?>
-
+</main>
 
 <!-- Footer -->
 <footer class="footer">
