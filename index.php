@@ -11,34 +11,18 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
         <h2 class="section_title">Компания в цифрах</h2>
 
         <?php
-            $APPLICATION->IncludeComponent('bitrix:news', '.default', []);
+        $APPLICATION->IncludeComponent(
+            "lancy:content.block",
+            "digitals",
+            [
+                "COMPONENT_TEMPLATE" => "digitals",
+                "IBLOCK_TYPE" => "site_content",
+                "IBLOCK_ID" => "3",
+                "SECTION_ID" => "3"
+            ],
+            false
+        );
         ?>
-        <div class="row g-4">
-            <div class="col-md-3 col-sm-6">
-                <div class="stat-card">
-                    <div class="stat-number">15</div>
-                    <div class="stat-label">Лет на рынке</div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="stat-card">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Проектов реализовано</div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="stat-card">
-                    <div class="stat-number">300+</div>
-                    <div class="stat-label">Довольных клиентов</div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="stat-card">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Специалистов в команде</div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 

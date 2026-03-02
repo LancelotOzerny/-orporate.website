@@ -253,32 +253,19 @@ $APPLICATION->SetTitle("Кейсы");
     <section class="section">
       <div class="container">
         <h2 class="section_title">Статистика проектов</h2>
-        <div class="row g-4">
-          <div class="col-md-3 col-sm-6">
-            <div class="stat-card">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Реализованных проектов</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="stat-card">
-              <div class="stat-number">200+</div>
-              <div class="stat-label">Довольных клиентов</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="stat-card">
-              <div class="stat-number">98%</div>
-              <div class="stat-label">Успешных запусков</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="stat-card">
-              <div class="stat-number">16+</div>
-              <div class="stat-label">Лет опыта</div>
-            </div>
-          </div>
-        </div>
+        <?php
+        $APPLICATION->IncludeComponent(
+            "lancy:content.block",
+            "digitals",
+            [
+                "COMPONENT_TEMPLATE" => "digitals",
+                "IBLOCK_TYPE" => "site_content",
+                "IBLOCK_ID" => "3",
+                "SECTION_ID" => "5"
+            ],
+            false
+        );
+        ?>
       </div>
     </section>
 
