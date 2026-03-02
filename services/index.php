@@ -287,72 +287,28 @@ $APPLICATION->SetTitle("Услуги");
         <h2 class="section_title">Частые вопросы</h2>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <div class="accordion" id="faqAccordion">
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                    Сколько времени занимает разработка сайта?
-                  </button>
-                </h3>
-                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Сроки зависят от сложности проекта. Простой корпоративный сайт — 1‑2 месяца, интернет‑магазин — 2‑4 месяца, корпоративный портал — 3‑6 месяцев. Точные сроки определяются после анализа требований.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                    Предоставляете ли вы техническую поддержку?
-                  </button>
-                </h3>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Да, мы предоставляем техническую поддержку 24/7. В зависимости от тарифа поддержка может быть включена на 3‑6 месяцев или предоставляться безлимитно по отдельному договору.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                    Можно ли доработать существующий сайт на Битрикс?
-                  </button>
-                </h3>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Конечно! Мы специализируемся на доработке и оптимизации существующих проектов. Проведем аудит, выявим проблемы и предложим решения по улучшению функционала и производительности.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                    Работаете ли вы с регионами?
-                  </button>
-                </h3>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Да, мы работаем с клиентами по всей России и странам СНГ. Все коммуникации проходят онлайн, что позволяет эффективно работать удаленно. При необходимости наши специалисты могут выехать к вам.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                    Какие гарантии вы предоставляете?
-                  </button>
-                </h3>
-                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Мы предоставляем гарантию на все выполненные работы сроком от 6 до 12 месяцев. В течение гарантийного периода устраняем все найденные ошибки бесплатно. Также заключаем договор с прописанными сроками и ответственностью.
-                  </div>
-                </div>
-              </div>
-            </div>
+              <?$APPLICATION->IncludeComponent(
+                  "bitrix:support.faq.element.list",
+                  "tiles",
+                  [
+                      "AJAX_MODE" => "N",
+                      "AJAX_OPTION_ADDITIONAL" => "",
+                      "AJAX_OPTION_HISTORY" => "N",
+                      "AJAX_OPTION_JUMP" => "N",
+                      "AJAX_OPTION_STYLE" => "N",
+                      "CACHE_GROUPS" => "Y",
+                      "CACHE_TIME" => "36000000",
+                      "CACHE_TYPE" => "A",
+                      "COMPONENT_TEMPLATE" => "tiles",
+                      "IBLOCK_ID" => "1",
+                      "IBLOCK_TYPE" => "site_content",
+                      "PATH_TO_USER" => "",
+                      "RATING_TYPE" => "",
+                      "SECTION_ID" => "2",
+                      "SHOW_RATING" => "N"
+                  ],
+                  false
+              );?>
           </div>
         </div>
       </div>

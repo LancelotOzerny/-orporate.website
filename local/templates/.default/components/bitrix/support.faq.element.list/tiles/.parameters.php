@@ -14,7 +14,7 @@ $iblockId = (int)$arCurrentValues['IBLOCK_ID'] ?? 0;
 if ($iblockId > 0)
 {
     $arSectionList = [
-        0 => 'Не выбрано'
+        0 => \Bitrix\Main\Localization\Loc::getMessage('SUPPORT_FAQ_ELEMENT_LIST.TEMPLATE_TILES.NOT_CHOOSE')
     ];
     $dbSectionList = CIBlockSection::GetList([], ['IBLOCK_ID' => $iblockId]);
     while ($item = $dbSectionList->Fetch())
@@ -24,7 +24,7 @@ if ($iblockId > 0)
 
     $arTemplateParameters["SECTION_ID"] = [
         "PARENT" => "SETTINGS",
-        "NAME" => 'Выбор раздела ИБлока',
+        "NAME" => \Bitrix\Main\Localization\Loc::getMessage('SUPPORT_FAQ_ELEMENT_LIST.TEMPLATE_TILES.SELECT_IBLOCK_SECTION'),
         "TYPE" => "LIST",
         "VALUES" => $arSectionList,
         "DEFAULT" => '0',

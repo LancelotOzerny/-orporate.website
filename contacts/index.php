@@ -240,56 +240,28 @@ $APPLICATION->SetTitle("Контакты");
         <h2 class="section_title">Часто задаваемые вопросы</h2>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <div class="accordion" id="contactFaq">
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                    Как быстро вы отвечаете на обращения?
-                  </button>
-                </h3>
-                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#contactFaq">
-                  <div class="accordion-body">
-                    Мы стараемся ответить на все обращения в течение 1 часа в рабочее время (Пн-Пт 9:00-18:00). Обращения, полученные в нерабочее время, обрабатываются на следующий рабочий день.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                    Можно ли приехать в офис без предварительной записи?
-                  </button>
-                </h3>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
-                  <div class="accordion-body">
-                    Для вашего удобства рекомендуем предварительно согласовать встречу по телефону или email. Так мы сможем подготовиться к встрече и уделить вам максимум внимания.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                    Работаете ли вы с регионами?
-                  </button>
-                </h3>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
-                  <div class="accordion-body">
-                    Да, мы успешно работаем с клиентами по всей России и странам СНГ. Все коммуникации проходят онлайн через видеоконференции, email и мессенджеры.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                    Предоставляете ли вы бесплатную консультацию?
-                  </button>
-                </h3>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
-                  <div class="accordion-body">
-                    Да, первичная консультация по вашему проекту абсолютно бесплатна. Мы оценим задачу, предложим решения и рассчитаем стоимость работ.
-                  </div>
-                </div>
-              </div>
-            </div>
+              <?$APPLICATION->IncludeComponent(
+                  "bitrix:support.faq.element.list",
+                  "tiles",
+                  [
+                      "AJAX_MODE" => "N",
+                      "AJAX_OPTION_ADDITIONAL" => "",
+                      "AJAX_OPTION_HISTORY" => "N",
+                      "AJAX_OPTION_JUMP" => "N",
+                      "AJAX_OPTION_STYLE" => "N",
+                      "CACHE_GROUPS" => "Y",
+                      "CACHE_TIME" => "36000000",
+                      "CACHE_TYPE" => "A",
+                      "COMPONENT_TEMPLATE" => "tiles",
+                      "IBLOCK_ID" => "1",
+                      "IBLOCK_TYPE" => "site_content",
+                      "PATH_TO_USER" => "",
+                      "RATING_TYPE" => "",
+                      "SECTION_ID" => "1",
+                      "SHOW_RATING" => "N"
+                  ],
+                  false
+              );?>
           </div>
         </div>
       </div>
