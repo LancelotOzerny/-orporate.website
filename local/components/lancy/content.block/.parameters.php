@@ -8,10 +8,6 @@ $arIblockSections = [0 => 'Не выбрано'];
 
 if (!CModule::IncludeModule("iblock")) return;
 
-echo '<pre>';
-print_r($arCurrentValues);
-echo '</pre>';
-
 /* =========================== IBLOCK TYPES =========================== */
 $db_iblock_type = CIBlockType::GetList();
 while($ar_iblock_type = $db_iblock_type->Fetch())
