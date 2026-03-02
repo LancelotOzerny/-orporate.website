@@ -159,10 +159,31 @@ $APPLICATION->SetTitle("Контакты");
         <h2 class="section_title">Как нас найти</h2>
         <div class="row">
           <div class="col-12">
-            <div class="map-placeholder">
-              <i class="bi bi-map" style="font-size: 3rem;"></i>
-              <span class="ms-3">Интерактивная карта (интеграция с Яндекс.Картами или 2GIS)</span>
-            </div>
+              <?$APPLICATION->IncludeComponent(
+                      "bitrix:map.yandex.view",
+                      ".default",
+                      [
+                              "API_KEY" => "",
+                              "CONTROLS" => [
+                                      0 => "ZOOM",
+                                      1 => "MINIMAP",
+                                      2 => "TYPECONTROL",
+                                      3 => "SCALELINE",
+                              ],
+                              "INIT_MAP_TYPE" => "MAP",
+                              "MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:47.222535116975116;s:10:\"yandex_lon\";d:39.71756949589596;s:12:\"yandex_scale\";i:18;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:39.71828832791195;s:3:\"LAT\";d:47.22266850912881;s:4:\"TEXT\";s:16:\"Наш офис!\";}}}",
+                              "MAP_HEIGHT" => "500",
+                              "MAP_ID" => "39 ",
+                              "MAP_WIDTH" => "100%",
+                              "OPTIONS" => [
+                                      0 => "ENABLE_SCROLL_ZOOM",
+                                      1 => "ENABLE_DBLCLICK_ZOOM",
+                                      2 => "ENABLE_DRAGGING",
+                              ],
+                              "COMPONENT_TEMPLATE" => ".default"
+                      ],
+                      false
+              );?>
             <div class="mt-4 text-center">
               <p class="lead mb-3">Наш офис находится в центре Ростова-на-Дону</p>
               <p class="text-muted">
