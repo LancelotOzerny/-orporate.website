@@ -99,7 +99,7 @@ false
                 <h2 class="mb-4">Команда профессионалов</h2>
                 <p class="lead mb-4">50+ специалистов, увлеченных своим делом.</p>
                 <p>В нашей команде работают опытные разработчики, дизайнеры, аналитики и менеджеры проектов. Средний опыт специалистов — 12 лет. Мы постоянно развиваемся, проходим обучение и получаем сертификаты.</p>
-                <a href="team.html" class="btn btn-primary mt-3">Познакомиться с командой</a>
+                <a href="/about/team/" class="btn btn-primary mt-3">Познакомиться с командой</a>
             </div>
         </div>
     </div>
@@ -152,7 +152,7 @@ false
                 <h2 class="mb-4">Наша миссия</h2>
                 <p class="lead mb-4">Делать сложные IT‑решения простыми и доступными.</p>
                 <p>Мы считаем, что технологии должны помогать бизнесу развиваться, а не мешать. Наша цель — создавать удобные, надежные и масштабируемые решения для наших клиентов.</p>
-                <a href="mission.html" class="btn btn-primary mt-3">Подробнее о ценностях</a>
+                <a href="/about/missiya-i-tsennosti/" class="btn btn-primary mt-3">Подробнее о ценностях</a>
             </div>
         </div>
     </div>
@@ -164,10 +164,10 @@ false
         <h2 class="mb-4">Готовы начать проект?</h2>
         <p class="lead mb-4">Свяжитесь с нами для консультации без обязательств.</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="contacts.html" class="btn btn-primary btn-lg">
+            <a href="/contacts/" class="btn btn-primary btn-lg">
                 <i class="bi bi-envelope me-2"></i>Связаться с нами
             </a>
-            <a href="services.html" class="btn btn-outline-primary btn-lg">
+            <a href="/services/" class="btn btn-outline-primary btn-lg">
                 <i class="bi bi-list me-2"></i>Услуги и цены
             </a>
         </div>
