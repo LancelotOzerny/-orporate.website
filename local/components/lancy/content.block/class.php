@@ -20,16 +20,16 @@ class ContentBlockComponent extends CBitrixComponent
         {
             $arFilter = [
                 "IBLOCK_ID" => $arResult['IBLOCK_ID'],
-                "IBLOCK_SECTION_ID" => $arResult['SECTION_ID'],
+                "SECTION_ID" => $arResult['SECTION_ID'],
                 "ACTIVE_DATE"=>"Y",
-                "ACTIVE"=>"Y"
+                "ACTIVE"=>"Y",
+                'INCLUDE_SUBSECTIONS' => 'Y'
             ];
 
             $res = CIBlockElement::GetList(Array(), $arFilter);
             while($ob = $res->GetNextElement())
             {
-                $arFields = $ob->GetFields();
-                $arResult['ITEMS'][] = $arFields;
+                $arResult['ITEMS'][] = $ob->GetFields();
             }
         }
 
