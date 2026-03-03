@@ -7,8 +7,24 @@ $APPLICATION->SetTitle("Наша команда");
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
-        <h2 class="mb-4">50+ профессионалов в сфере IT</h2>
-        <p class="lead">Мы — команда опытных специалистов, увлеченных своим делом. Каждый член команды вносит свой уникальный вклад в успех наших проектов.</p>
+      <?php
+      $APPLICATION->IncludeComponent(
+          "bitrix:news.detail",
+          "sta",
+          Array(
+              "ELEMENT_ID" => "45",
+              "IBLOCK_ID" => "9",
+              "IBLOCK_TYPE" => "site_content",
+              "FIELD_CODE" => [
+                  0 =>"NAME",
+              ],
+              "PROPERTY_CODE" => [
+                  0=>"UF_SUBTITLE",
+              ],
+
+              "BUTTONS_COUNT" => "0",
+          )
+      );?>
       </div>
     </div>
   </div>
@@ -326,9 +342,26 @@ $APPLICATION->SetTitle("Наша команда");
 <!-- CTA Section -->
 <section class="section">
   <div class="container text-center">
-    <h2 class="mb-4">Хотите присоединиться к нашей команде?</h2>
-    <p class="lead mb-4">Мы всегда рады талантливым специалистам</p>
-    <a href="index.html#career" class="btn btn-primary btn-lg">Посмотреть вакансии</a>
+      <?php
+      $APPLICATION->IncludeComponent(
+              "bitrix:news.detail",
+              "sta",
+              Array(
+                  "ELEMENT_ID" => "46",
+                  "IBLOCK_ID" => "9",
+                  "IBLOCK_TYPE" => "site_content",
+                  "FIELD_CODE" => [
+                      0 =>"NAME",
+                  ],
+                  "PROPERTY_CODE" => [
+                      0=>"UF_SUBTITLE",
+                  ],
+
+                  "BUTTONS_COUNT" => "1",
+                  'BTN1_TEXT' => 'Посмотреть вакансии',
+                  'BTN1_LINK' => '/carrer/',
+              )
+      );?>
   </div>
 </section>
 

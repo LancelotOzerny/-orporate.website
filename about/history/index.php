@@ -7,8 +7,24 @@ $APPLICATION->SetTitle("История компании");
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="mb-4">Путь от стартапа до лидера рынка</h2>
-            <p class="lead">За 15 лет работы мы прошли путь от небольшой команды энтузиастов до одного из ведущих разработчиков корпоративных IT-решений в России. Наша история — это история постоянного развития, инноваций и заботы о клиентах.</p>
+              <?php
+              $APPLICATION->IncludeComponent(
+                      "bitrix:news.detail",
+                      "sta",
+                      Array(
+                          "ELEMENT_ID" => "47",
+                          "IBLOCK_ID" => "9",
+                          "IBLOCK_TYPE" => "site_content",
+                          "FIELD_CODE" => [
+                                  0 =>"NAME",
+                          ],
+                          "PROPERTY_CODE" => [
+                                  0=>"UF_SUBTITLE",
+                          ],
+
+                          "BUTTONS_COUNT" => "0",
+                      )
+              );?>
           </div>
         </div>
       </div>
@@ -295,14 +311,43 @@ $APPLICATION->SetTitle("История компании");
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <h2 class="mb-4">Наша миссия</h2>
-            <p class="lead mb-4">Мы создаем технологии, которые помогают бизнесу развиваться и достигать новых высот</p>
-            <p>За 15 лет работы мы не изменили своей главной цели — делать сложные IT-решения простыми и доступными для любого бизнеса. Наш опыт, экспертиза и инновационный подход позволяют нам оставаться лидерами рынка.</p>
-            <p>Мы верим в долгосрочные партнерские отношения с клиентами. Успех наших клиентов — это наш успех.</p>
-            <a href="about.html#mission" class="btn btn-primary mt-3">Узнать больше о миссии</a>
+              <?php
+                $APPLICATION->IncludeComponent(
+                "bitrix:news.detail",
+                "sta",
+                Array(
+                    "ELEMENT_ID" => "48",
+                    "IBLOCK_ID" => "9",
+                    "IBLOCK_TYPE" => "site_content",
+                    "FIELD_CODE" => [
+                        0 =>"NAME",
+                    ],
+                    "PROPERTY_CODE" => [
+                        0=>"UF_SUBTITLE",
+                    ],
+
+                        "BUTTONS_COUNT" => "1",
+                        'BTN1_TEXT' => 'Узнать больше о миссии',
+                        'BTN1_LINK' => '/about/missiya-i-tsennosti/',
+                        'BUTTONS_ON_CENTER' => 'N'
+                    )
+                );?>
           </div>
           <div class="col-lg-6">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&h=500&fit=crop" alt="Миссия" class="img-fluid rounded shadow">
+              <?$APPLICATION->IncludeComponent(
+                      "lancy:Image",
+                      ".default",
+                      [
+                              "ALT" => "",
+                              "COLLECTION" => "1",
+                              "COLLECTION_URL" => "/upload/medialibrary/e38/r5yq94vb4rhyt4ky612jty41gaq4h3nz.jpeg",
+                              "COMPONENT_TEMPLATE" => ".default",
+                              "TYPE" => "MEDIA_LIBRARY",
+                              "WIDTH" => "100%",
+                              "HEIGHT" => ""
+                      ],
+                      false
+              );?>
           </div>
         </div>
       </div>
@@ -331,16 +376,32 @@ $APPLICATION->SetTitle("История компании");
     <!-- CTA Section -->
     <section class="section">
       <div class="container text-center">
-        <h2 class="mb-4">Станьте частью нашей истории успеха</h2>
-        <p class="lead mb-4">Мы готовы помочь вашему бизнесу достичь новых высот</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="contacts.html" class="btn btn-primary btn-lg">
-            <i class="bi bi-envelope me-2"></i>Связаться с нами
-          </a>
-          <a href="cases.html" class="btn btn-outline-primary btn-lg">
-            <i class="bi bi-folder me-2"></i>Наши проекты
-          </a>
-        </div>
+          <?php
+          $APPLICATION->IncludeComponent(
+                  "bitrix:news.detail",
+                  "sta",
+                  Array(
+                          "ELEMENT_ID" => "49",
+                          "IBLOCK_ID" => "9",
+                          "IBLOCK_TYPE" => "site_content",
+                          "FIELD_CODE" => [
+                                  0 =>"NAME",
+                          ],
+                          "PROPERTY_CODE" => [
+                                  0=>"UF_SUBTITLE",
+                          ],
+
+                          "BUTTONS_COUNT" => "2",
+
+                          'BTN1_TEXT' => 'Связаться с нами',
+                          'BTN1_LINK' => '/contacts/',
+                          'BTN1_ICON_MODIFIER' => 'envelope',
+
+                          'BTN2_TEXT' => 'Наши проекты',
+                          'BTN2_LINK' => '/cases/',
+                          'BTN2_ICON_MODIFIER' => 'folder',
+                  )
+          );?>
       </div>
     </section>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -7,8 +7,24 @@ $APPLICATION->SetTitle("Кейсы");
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="mb-4">500+ успешных проектов</h2>
-            <p class="lead">Мы реализовали проекты для компаний из различных отраслей: от малого бизнеса до крупных федеральных корпораций. Каждый проект уникален и решает конкретные задачи бизнеса.</p>
+              <?php
+              $APPLICATION->IncludeComponent(
+                      "bitrix:news.detail",
+                      "sta",
+                      Array(
+                              "ELEMENT_ID" => "54",
+                              "IBLOCK_ID" => "9",
+                              "IBLOCK_TYPE" => "site_content",
+                              "FIELD_CODE" => [
+                                      0 =>"NAME",
+                              ],
+                              "PROPERTY_CODE" => [
+                                      0=>"UF_SUBTITLE",
+                              ],
+
+                              "BUTTONS_COUNT" => "0",
+                      )
+              );?>
           </div>
         </div>
       </div>
@@ -175,9 +191,28 @@ $APPLICATION->SetTitle("Кейсы");
     <!-- CTA Section -->
     <section class="section">
       <div class="container text-center">
-        <h2 class="mb-4">Хотите такой же успешный проект?</h2>
-        <p class="lead mb-4">Обсудим вашу задачу и предложим оптимальное решение</p>
-        <a href="index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+          <?php
+          $APPLICATION->IncludeComponent(
+                  "bitrix:news.detail",
+                  "sta",
+                  Array(
+                          "ELEMENT_ID" => "55",
+                          "IBLOCK_ID" => "9",
+                          "IBLOCK_TYPE" => "site_content",
+                          "FIELD_CODE" => [
+                                  0 =>"NAME",
+                          ],
+                          "PROPERTY_CODE" => [
+                                  0=>"UF_SUBTITLE",
+                          ],
+
+                          "BUTTONS_COUNT" => "1",
+
+                          'BTN1_TEXT' => 'Связаться с нами',
+                          'BTN1_LINK' => '/contacts/',
+                          'BTN1_ICON_MODIFIER' => 'envelope',
+                  )
+          );?>
       </div>
     </section>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

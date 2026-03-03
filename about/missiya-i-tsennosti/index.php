@@ -21,18 +21,40 @@ $APPLICATION->SetTitle("Миссия и ценности");
 
         <div class="row align-items-center mb-5">
           <div class="col-lg-6 mb-4 mb-lg-0">
-            <h3 class="mb-4">Что нами движет</h3>
-            <p class="lead">Страсть к технологиям и желание помогать бизнесу</p>
-            <p>Мы не просто пишем код — мы создаем инструменты для успеха наших клиентов. Каждый член нашей команды понимает, что за каждым проектом стоят реальные люди и их бизнес-цели.</p>
-            <ul class="list-unstyled">
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Фокус на результате, а не на процессе</li>
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Долгосрочные партнерские отношения</li>
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Постоянное развитие и совершенствование</li>
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Ответственность за каждый проект</li>
-            </ul>
+              <?php
+              $APPLICATION->IncludeComponent(
+                  "bitrix:news.detail",
+                  "sta",
+                  Array(
+                      "ELEMENT_ID" => "50",
+                      "IBLOCK_ID" => "9",
+                      "IBLOCK_TYPE" => "site_content",
+                      "FIELD_CODE" => [
+                              0 =>"NAME",
+                      ],
+                      "PROPERTY_CODE" => [
+                              0=>"UF_SUBTITLE",
+                      ],
+
+                      "BUTTONS_COUNT" => "0",
+                  )
+              );?>
           </div>
           <div class="col-lg-6">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&h=500&fit=crop" alt="Команда" class="img-fluid rounded shadow">
+              <?$APPLICATION->IncludeComponent(
+                  "lancy:Image",
+                  ".default",
+                  [
+                      "ALT" => "",
+                      "COLLECTION" => "1",
+                      "COLLECTION_URL" => "/upload/medialibrary/b8c/gns4ej5yta49ztnhn2ne9jqa7frwg2j4.png",
+                      "COMPONENT_TEMPLATE" => ".default",
+                      "TYPE" => "MEDIA_LIBRARY",
+                      "WIDTH" => "100%",
+                      "HEIGHT" => ""
+                  ],
+                  false
+              );?>
           </div>
         </div>
       </div>
@@ -178,7 +200,20 @@ $APPLICATION->SetTitle("Миссия и ценности");
         <h2 class="section_title">Корпоративная культура</h2>
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 mb-lg-0">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&h=500&fit=crop" alt="Корпоративная культура" class="img-fluid rounded shadow">
+              <?$APPLICATION->IncludeComponent(
+                      "lancy:Image",
+                      ".default",
+                      [
+                              "ALT" => "",
+                              "COLLECTION" => "1",
+                              "COLLECTION_URL" => "/upload/medialibrary/4f4/o4a0hc6ct2uyfh0bi9nxvw0kf4imgzqb.jpg",
+                              "COMPONENT_TEMPLATE" => ".default",
+                              "TYPE" => "MEDIA_LIBRARY",
+                              "WIDTH" => "95%",
+                              "HEIGHT" => ""
+                      ],
+                      false
+              );?>
           </div>
           <div class="col-lg-6">
             <h3 class="mb-4">Как мы работаем</h3>
@@ -239,16 +274,32 @@ $APPLICATION->SetTitle("Миссия и ценности");
     <!-- CTA Section -->
     <section class="section bg-light">
       <div class="container text-center">
-        <h2 class="mb-4">Разделяете наши ценности?</h2>
-        <p class="lead mb-4">Присоединяйтесь к нашей команде или станьте нашим клиентом</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="index.html#career" class="btn btn-primary btn-lg">
-            <i class="bi bi-briefcase me-2"></i>Вакансии
-          </a>
-          <a href="contacts.html" class="btn btn-outline-primary btn-lg">
-            <i class="bi bi-envelope me-2"></i>Связаться с нами
-          </a>
-        </div>
+          <?php
+          $APPLICATION->IncludeComponent(
+                  "bitrix:news.detail",
+                  "sta",
+                  Array(
+                          "ELEMENT_ID" => "51",
+                          "IBLOCK_ID" => "9",
+                          "IBLOCK_TYPE" => "site_content",
+                          "FIELD_CODE" => [
+                                  0 =>"NAME",
+                          ],
+                          "PROPERTY_CODE" => [
+                                  0=>"UF_SUBTITLE",
+                          ],
+
+                          "BUTTONS_COUNT" => "2",
+
+                        'BTN1_TEXT' => 'Вакансии',
+                        'BTN1_LINK' => '/carrer/',
+                        'BTN1_ICON_MODIFIER' => 'briefcase',
+
+                        'BTN2_TEXT' => 'Связаться с нами',
+                        'BTN2_LINK' => '/contacts/',
+                        'BTN2_ICON_MODIFIER' => 'envelope',
+                  )
+          );?>
       </div>
     </section>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

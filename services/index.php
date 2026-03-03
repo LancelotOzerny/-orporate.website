@@ -7,12 +7,39 @@ $APPLICATION->SetTitle("Услуги");
       <div class="container">
         <div class="row align-items-center g-5 mb-5">
           <div class="col-lg-6">
-            <h2 class="mb-4">Комплексные IT‑решения для вашего бизнеса</h2>
-            <p class="lead">Мы предлагаем полный спектр услуг по разработке, внедрению и поддержке цифровых продуктов на платформе 1С‑Битрикс.</p>
-            <p>От проектирования архитектуры до технической поддержки — мы сопровождаем проекты на всех этапах жизненного цикла.</p>
+              <?php
+              $APPLICATION->IncludeComponent(
+                      "bitrix:news.detail",
+                      "sta",
+                      Array(
+                              "ELEMENT_ID" => "52",
+                              "IBLOCK_ID" => "9",
+                              "IBLOCK_TYPE" => "site_content",
+                              "FIELD_CODE" => [
+                                      0 =>"NAME",
+                              ],
+                              "PROPERTY_CODE" => [
+                                      0=>"UF_SUBTITLE",
+                              ],
+
+                              "BUTTONS_COUNT" => "0",
+                      )
+              );?>
           </div>
           <div class="col-lg-6">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="IT решения" class="img-fluid rounded shadow">
+              <?$APPLICATION->IncludeComponent(
+                  "lancy:Image",
+                  ".default",
+                  [
+                          "ALT" => "Корпоративные порталы",
+                          "COMPONENT_TEMPLATE" => ".default",
+                          "TYPE" => "MEDIA_LIBRARY",
+                          "WIDTH" => "100%",
+                          "COLLECTION" => "1",
+                          "COLLECTION_URL" => "/upload/medialibrary/101/h48dhbdempeyfs9qsumb23kdgrfi0em2.png"
+                  ],
+                  false
+              );?>
           </div>
         </div>
       </div>
@@ -182,31 +209,26 @@ $APPLICATION->SetTitle("Услуги");
     <!-- Technologies Section -->
     <section class="section bg-light">
       <div class="container">
-        <h2 class="section_title">Технологии и инструменты</h2>
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="text-center">
-              <span class="tech-badge">1С‑Битрикс</span>
-              <span class="tech-badge">Bitrix24</span>
-              <span class="tech-badge">PHP 8</span>
-              <span class="tech-badge">MySQL</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">Redis</span>
-              <span class="tech-badge">Elasticsearch</span>
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">Vue.js</span>
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">HTML5</span>
-              <span class="tech-badge">CSS3</span>
-              <span class="tech-badge">SASS/LESS</span>
-              <span class="tech-badge">Bootstrap</span>
-              <span class="tech-badge">REST API</span>
-              <span class="tech-badge">GraphQL</span>
-              <span class="tech-badge">Docker</span>
-              <span class="tech-badge">Git</span>
-              <span class="tech-badge">CI/CD</span>
-              <span class="tech-badge">Nginx</span>
-            </div>
+          <div class="col-lg-8 text-center">
+              <?php
+              $APPLICATION->IncludeComponent(
+                  "bitrix:news.detail",
+                  "sta",
+                  Array(
+                          "ELEMENT_ID" => "53",
+                          "IBLOCK_ID" => "9",
+                          "IBLOCK_TYPE" => "site_content",
+                          "FIELD_CODE" => [
+                                  0 =>"NAME",
+                          ],
+                          "PROPERTY_CODE" => [
+                                  0=>"UF_SUBTITLE",
+                          ],
+
+                          "BUTTONS_COUNT" => "0",
+                  )
+              );?>
           </div>
         </div>
       </div>

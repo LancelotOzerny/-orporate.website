@@ -16,7 +16,6 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
                     [
                         "ALT" => "Корпоративные порталы",
                         "COMPONENT_TEMPLATE" => ".default",
-                        "LINK_URL" => "https://img.freepik.com/premium-photo/group-businesspeople-talking-near-table-with-laptop-cups-isolated-white_488220-42683.jpg?semt=ais_hybrid&w=740",
                         "TYPE" => "MEDIA_LIBRARY",
                         "WIDTH" => "90%",
                         "HEIGHT" => "",
