@@ -16,3 +16,4 @@ if ($buttons_count > 0)
     }
 }
 $arResult['BUTTONS']['COUNT'] = $buttons_count;
+$arResult['BUTTONS']['ON_CENTER'] = $arParams['BUTTONS_ON_CENTER'] ?? 'Y';

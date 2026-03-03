@@ -56,7 +56,9 @@ $arTemplateParameters['IBLOCK_ID'] = [
 ];
 
 // 3. Элементы (зависит от ИБ)
+$iblockId = (int)($arCurrentValues['ELEMENT_ID'] ?? 0);
 $iblockId = (int)($arCurrentValues['IBLOCK_ID'] ?? 0);
+
 if ($iblockId > 0)
 {
     $arElements = ['0' => 'Не выбран'];
@@ -84,9 +86,6 @@ if ($iblockId > 0)
 }
 
 
-$iblockId = (int)($arCurrentValues['ELEMENT_ID'] ?? 0);
-
-
 if ($iblockId > 0)
 {
     $arTemplateParameters['BUTTONS_COUNT'] = [
@@ -96,6 +95,13 @@ if ($iblockId > 0)
         'VALUES' => [1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5'],
         'DEFAULT' => '2',
         'REFRESH' => 'Y'
+    ];
+
+    $arTemplateParameters['BUTTONS_ON_CENTER'] = [
+        'PARENT' => 'BUTTONS_GROUP',
+        'NAME' => 'По центру',
+        'TYPE' => 'CHECKBOX',
+        'DEFAULT' => 'Y',
     ];
 
     $btnCount = (int)($arCurrentValues['BUTTONS_COUNT'] ?? 2);

@@ -26,11 +26,30 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
                     false
                 );?>
             </div>
+
             <div class="col-lg-6">
-                <h2 class="mb-4">Команда профессионалов</h2>
-                <p class="lead mb-4">50+ специалистов, увлеченных своим делом.</p>
-                <p>В нашей команде работают опытные разработчики, дизайнеры, аналитики и менеджеры проектов. Средний опыт специалистов — 12 лет. Мы постоянно развиваемся, проходим обучение и получаем сертификаты.</p>
-                <a href="/about/team/" class="btn btn-primary mt-3">Познакомиться с командой</a>
+                <?php
+                $APPLICATION->IncludeComponent(
+                        "bitrix:news.detail",
+                        "sta",
+                        Array(
+                            "ELEMENT_ID" => "43",
+                            "IBLOCK_ID" => "9",
+                            "IBLOCK_TYPE" => "site_content",
+                            "FIELD_CODE" => [
+                                0 =>"NAME",
+                            ],
+                            "PROPERTY_CODE" => [
+                                0=>"UF_SUBTITLE",
+                            ],
+
+                            "BUTTONS_COUNT" => "1",
+
+                            "BTN1_TEXT" => "Познакомиться с командой",
+                            "BTN1_LINK" => "/about/team/",
+                            'BUTTONS_ON_CENTER' => 'N'
+                        )
+                );?>
             </div>
         </div>
     </div>
@@ -117,39 +136,62 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
 <section class="section bg-light" id="mission">
     <div class="container">
         <div class="row">
-            <?php
-            $APPLICATION->IncludeComponent(
-                "bitrix:news.detail",
-                "sta",
-                Array(
-                    "ELEMENT_ID" => "41",
-                    "IBLOCK_ID" => "9",
-                    "IBLOCK_TYPE" => "site_content",
-                    "FIELD_CODE" => [
-                        0 =>"NAME",
-                        1 =>"PREVIEW_TEXT",
-                    ],
-                    "PROPERTY_CODE" => [
-                        0=>"UF_SUBTITLE",
-                    ],
-                )
-            );?>
+            <div class="col-lg-8 mx-auto text-center">
+                <?php
+                $APPLICATION->IncludeComponent(
+                    "bitrix:news.detail",
+                    "sta",
+                    Array(
+                        "ELEMENT_ID" => "41",
+                        "IBLOCK_ID" => "9",
+                        "IBLOCK_TYPE" => "site_content",
+                        "FIELD_CODE" => [
+                            0 =>"NAME",
+                            1 =>"PREVIEW_TEXT",
+                        ],
+                        "PROPERTY_CODE" => [
+                            0=>"UF_SUBTITLE",
+                        ],
+                        "BUTTONS_COUNT" => "1",
+                        "BTN1_TEXT" => "Подробнее о ценностях",
+                        "BTN1_LINK" => "/about/missiya-i-tsennosti/",
+                    )
+                );?>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
 <section class="section">
-    <div class="container text-center">
-        <h2 class="mb-4">Готовы начать проект?</h2>
-        <p class="lead mb-4">Свяжитесь с нами для консультации без обязательств.</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="/contacts/" class="btn btn-primary btn-lg">
-                <i class="bi bi-envelope me-2"></i>Связаться с нами
-            </a>
-            <a href="/services/" class="btn btn-outline-primary btn-lg">
-                <i class="bi bi-list me-2"></i>Услуги и цены
-            </a>
+    <div class="container">
+        <div class="col-lg-8 mx-auto text-center">
+            <?php
+            $APPLICATION->IncludeComponent(
+                "bitrix:news.detail",
+                "sta",
+                Array(
+                    "ELEMENT_ID" => "42",
+                    "IBLOCK_ID" => "9",
+                    "IBLOCK_TYPE" => "site_content",
+                    "FIELD_CODE" => [
+                        0 =>"NAME",
+                    ],
+                    "PROPERTY_CODE" => [
+                        0=>"UF_SUBTITLE",
+                    ],
+
+                    "BUTTONS_COUNT" => "2",
+
+                    "BTN1_TEXT" => "Связаться с нами",
+                    "BTN1_LINK" => "/contacts/",
+                    "BTN1_ICON_MODIFIER" => "envelope",
+
+                    "BTN2_TEXT" => "Услуги и цены",
+                    "BTN2_LINK" => "/services/",
+                    "BTN2_ICON_MODIFIER" => "list",
+                )
+            );?>
         </div>
     </div>
 </section>
