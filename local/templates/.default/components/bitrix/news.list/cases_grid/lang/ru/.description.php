@@ -1,0 +1,3 @@
+<?php
+$MESS['COMPONENT.NEWS_LIST.TEMPLATE.CASES_GRID.NAME'] = 'Сетка кейсов';
+$MESS['COMPONENT.NEWS_LIST.TEMPLATE.CASES_GRID.DESC'] = 'Кейсы в виде сетки карточек';
