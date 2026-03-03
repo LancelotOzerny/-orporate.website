@@ -1,0 +1,3 @@
+<?php
+$MESS['COMPONENT.NEWS_DETAIL.TEMPLATE.STA.NAME'] = 'СТА раздел сайта';
+$MESS['COMPONENT.NEWS_DETAIL.TEMPLATE.STA.DESC'] = 'СТА раздел сайта';

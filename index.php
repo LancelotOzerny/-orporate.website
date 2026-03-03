@@ -117,12 +117,23 @@ $APPLICATION->SetTitle("Главная - Корпоративный портал
 <section class="section bg-light" id="mission">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="mb-4">Наша миссия</h2>
-                <p class="lead mb-4">Делать сложные IT‑решения простыми и доступными.</p>
-                <p>Мы считаем, что технологии должны помогать бизнесу развиваться, а не мешать. Наша цель — создавать удобные, надежные и масштабируемые решения для наших клиентов.</p>
-                <a href="/about/missiya-i-tsennosti/" class="btn btn-primary mt-3">Подробнее о ценностях</a>
-            </div>
+            <?php
+            $APPLICATION->IncludeComponent(
+                "bitrix:news.detail",
+                "sta",
+                Array(
+                    "ELEMENT_ID" => "41",
+                    "IBLOCK_ID" => "9",
+                    "IBLOCK_TYPE" => "site_content",
+                    "FIELD_CODE" => [
+                        0 =>"NAME",
+                        1 =>"PREVIEW_TEXT",
+                    ],
+                    "PROPERTY_CODE" => [
+                        0=>"UF_SUBTITLE",
+                    ],
+                )
+            );?>
         </div>
     </div>
 </section>
