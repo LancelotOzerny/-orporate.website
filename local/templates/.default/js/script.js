@@ -198,33 +198,6 @@
   }
 
   // ============================================
-  // Фильтрация команды (если на странице team.html)
-  // ============================================
-  function initTeamFilter() {
-    $('.team-filters .btn').on('click', function() {
-      const filter = $(this).data('role');
-      
-      $('.team-filters .btn').removeClass('active');
-      $(this).addClass('active');
-
-      if (filter === 'all') {
-        $('.team-card').fadeIn(400);
-        $('#management-section, #dev-section, #marketing-section, #support-section').show();
-      } else {
-        $('.team-card').hide();
-        $('#management-section, #dev-section, #marketing-section, #support-section').hide();
-        $(`.team-card[data-role="${filter}"]`).fadeIn(400);
-        
-        // Показываем соответствующую секцию
-        if (filter === 'management') $('#management-section').show();
-        if (filter === 'dev') $('#dev-section').show();
-        if (filter === 'marketing') $('#marketing-section').show();
-        if (filter === 'support') $('#support-section').show();
-      }
-    });
-  }
-
-  // ============================================
   // Lazy Loading для изображений
   // ============================================
   function initLazyLoading() {

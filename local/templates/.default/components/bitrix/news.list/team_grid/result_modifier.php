@@ -4,30 +4,30 @@
 /** @var array $arParams */
 
 $arFilterSections = [];
+$arFilterSections[0] = \Bitrix\Main\Localization\Loc::getMessage('ALL_EMPLOYEE_TEXT');
+
+$arSections = [];
+$newItemsList = [];
 
 foreach ($arResult["ITEMS"] as &$arItem)
 {
-    $arItem['TAGS'] = explode(', ', $arItem['TAGS']);
-
     $section_id = $arItem['IBLOCK_SECTION_ID'];
     $section = CIBlockSection::GetList(
         [],
         [
             'ID' => $section_id,
             'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-        ],
-        false,
-        [
-            'ID', 'NAME', 'UF_BG_COLOR'
+            'NAME' => $arParams['NAME'],
         ]
     )->Fetch();
-    $arItem['PARENT_SECTION'] = [
-        'ID' => $section_id,
-        'NAME' => $section['NAME'],
-        'UF_BG_COLOR' => $section['UF_BG_COLOR'],
-    ];
+
+    $arSections[$section_id]['ID'] ??= $section_id;
+    $arSections[$section_id]['NAME'] ??= $section['NAME'];
+    $arSections[$section_id]['ITEMS'] ??= [];
+    $arSections[$section_id]['ITEMS'][] = $arItem;
 
     $arFilterSections[$section_id] = $section['NAME'];
 }
 
+$arResult['ITEMS'] = $arSections;
 $arResult['FILTERS'] = $arFilterSections;
