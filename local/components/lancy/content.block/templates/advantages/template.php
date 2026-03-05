@@ -11,6 +11,10 @@ $elements_modifiers = $arParams['ELEMENT_MODIFIER'] ?? '';
 $element_class_modifiers = $elements_modifiers ? 'class="' . $elements_modifiers . '"' : '';
 ?>
 
+<?php if($arResult['SECTION']['NAME'] ?? null): ?>
+    <h2 class="section_title"><?= $arResult['SECTION']['NAME'] ?></h2>
+<?php endif; ?>
+
 <div class="row g-4">
     <?php foreach ($arResult['ITEMS'] as $item): ?>
     <div <?= $element_class_modifiers ?>>

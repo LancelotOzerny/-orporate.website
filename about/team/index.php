@@ -2,7 +2,6 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Наша команда");
 ?>
-<!-- Intro Section -->
 <section class="section">
   <div class="container">
     <div class="row">
@@ -30,7 +29,6 @@ $APPLICATION->SetTitle("Наша команда");
   </div>
 </section>
 
-<!-- Team Filter -->
 <section class="section bg-light">
   <div class="container">
       <?php
@@ -104,10 +102,8 @@ $APPLICATION->SetTitle("Наша команда");
   </div>
 </section>
 
-<!-- Stats Section -->
 <section class="section">
   <div class="container">
-    <h2 class="section_title">Команда в цифрах</h2>
     <?php
     $APPLICATION->IncludeComponent(
         "lancy:content.block",
@@ -124,11 +120,8 @@ $APPLICATION->SetTitle("Наша команда");
   </div>
 </section>
 
-<!-- Culture Section -->
 <section class="section bg-light">
   <div class="container">
-    <h2 class="section_title">Корпоративная культура</h2>
-
     <?php
     $APPLICATION->IncludeComponent(
       "lancy:content.block",
@@ -147,7 +140,6 @@ $APPLICATION->SetTitle("Наша команда");
   </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section">
   <div class="container text-center">
       <?php

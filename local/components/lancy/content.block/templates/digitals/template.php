@@ -7,6 +7,10 @@ if (empty($arResult['ITEMS']))
 }
 ?>
 
+<?php if($arResult['SECTION']['NAME'] ?? null): ?>
+    <h2 class="section_title"><?= $arResult['SECTION']['NAME'] ?></h2>
+<?php endif; ?>
+
 <div class="row g-4">
 <?php foreach ($arResult['ITEMS'] as $item): ?>
     <div class="col-md-3 col-sm-6">

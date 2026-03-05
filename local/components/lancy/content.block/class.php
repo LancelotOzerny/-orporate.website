@@ -18,6 +18,9 @@ class ContentBlockComponent extends CBitrixComponent
 
         if ($arResult['SECTION_ID'] && $arResult['IBLOCK_ID'] && $arResult['IBLOCK_TYPE'])
         {
+            $section = CAllIBlockSection::GetByID((int)$arResult['SECTION_ID']);
+            $arResult['SECTION'] = $section->Fetch();
+
             $properties = [];
             foreach ($arParams['IBLOCK_PROPERTIES'] ?? [] as $property)
             {

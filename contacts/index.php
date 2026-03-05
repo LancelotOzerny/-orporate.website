@@ -270,19 +270,36 @@ $APPLICATION->SetTitle("Контакты");
     <!-- CTA Section -->
     <section class="section bg-light">
       <div class="container text-center">
-        <h2 class="mb-4">Готовы обсудить ваш проект?</h2>
-        <p class="lead mb-4">Свяжитесь с нами удобным способом</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="tel:+79991234567" class="btn btn-primary btn-lg">
-            <i class="bi bi-telephone me-2"></i>Позвонить
-          </a>
-          <a href="mailto:info@company.com" class="btn btn-outline-primary btn-lg">
-            <i class="bi bi-envelope me-2"></i>Написать email
-          </a>
-          <a href="#" class="btn btn-outline-primary btn-lg">
-            <i class="bi bi-telegram me-2"></i>Telegram
-          </a>
-        </div>
+          <?php
+          $APPLICATION->IncludeComponent(
+                  "bitrix:news.detail",
+                  "sta",
+                  Array(
+                          "ELEMENT_ID" => "71",
+                          "IBLOCK_ID" => "9",
+                          "IBLOCK_TYPE" => "site_content",
+                          "FIELD_CODE" => [
+                                  0 =>"NAME",
+                          ],
+                          "PROPERTY_CODE" => [
+                                  0=>"UF_SUBTITLE",
+                          ],
+
+                          "BUTTONS_COUNT" => "3",
+
+                          "BTN1_TEXT" => "Познакомиться с командой",
+                          "BTN1_LINK" => "#",
+                          "BTN1_ICON_MODIFIER" => "telephone",
+
+                          "BTN2_TEXT" => "Написать email",
+                          "BTN2_LINK" => "#",
+                          "BTN2_ICON_MODIFIER" => "envelope",
+
+                          "BTN3_TEXT" => "Телеграм",
+                          "BTN3_LINK" => "#",
+                          "BTN3_ICON_MODIFIER" => "telegram",
+                  )
+          );?>
       </div>
     </section>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

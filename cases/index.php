@@ -2,8 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Кейсы");
 ?>
-    <!-- Intro Section -->
-    <section class="section">
+<section class="section">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
@@ -28,9 +27,9 @@ $APPLICATION->SetTitle("Кейсы");
           </div>
         </div>
       </div>
-    </section>
+</section>
 
-    <section class="section bg-light">
+<section class="section bg-light">
         <div class="container">
             <?php
             $APPLICATION->IncludeComponent(
@@ -105,10 +104,8 @@ $APPLICATION->SetTitle("Кейсы");
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="section">
+<section class="section">
       <div class="container">
-        <h2 class="section_title">Статистика проектов</h2>
         <?php
         $APPLICATION->IncludeComponent(
             "lancy:content.block",
@@ -123,96 +120,95 @@ $APPLICATION->SetTitle("Кейсы");
         );
         ?>
       </div>
-    </section>
+</section>
 
-    <!-- Testimonials Section -->
-    <section class="section bg-light">
-      <div class="container">
-        <h2 class="section_title">Отзывы клиентов</h2>
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="mb-3">
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                </div>
-                <p class="card-text">"Отличная команда профессионалов! Разработали корпоративный портал точно в срок и по бюджету. Особенно порадовала интеграция с 1С — все работает безупречно."</p>
-                <div class="mt-3">
-                  <strong>Алексей Морозов</strong><br>
-                  <small class="text-muted">Директор производственной компании</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="mb-3">
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                </div>
-                <p class="card-text">"После запуска нашего интернет-магазина продажи выросли в 2.5 раза! Техническая поддержка работает оперативно, всегда готовы помочь. Рекомендую!"</p>
-                <div class="mt-3">
-                  <strong>Мария Волкова</strong><br>
-                  <small class="text-muted">Владелец сети магазинов</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="mb-3">
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                </div>
-                <p class="card-text">"Профессиональный подход на всех этапах: от аналитики до запуска. CRM-система полностью закрыла наши потребности и автоматизировала продажи."</p>
-                <div class="mt-3">
-                  <strong>Игорь Петренко</strong><br>
-                  <small class="text-muted">Руководитель отдела продаж</small>
-                </div>
-              </div>
-            </div>
-          </div>
+<!-- Testimonials Section -->
+<section class="section bg-light">
+<div class="container">
+<h2 class="section_title">Отзывы клиентов</h2>
+<div class="row g-4">
+  <div class="col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="mb-3">
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+        </div>
+        <p class="card-text">"Отличная команда профессионалов! Разработали корпоративный портал точно в срок и по бюджету. Особенно порадовала интеграция с 1С — все работает безупречно."</p>
+        <div class="mt-3">
+          <strong>Алексей Морозов</strong><br>
+          <small class="text-muted">Директор производственной компании</small>
         </div>
       </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section">
-      <div class="container text-center">
-          <?php
-          $APPLICATION->IncludeComponent(
-                  "bitrix:news.detail",
-                  "sta",
-                  Array(
-                          "ELEMENT_ID" => "55",
-                          "IBLOCK_ID" => "9",
-                          "IBLOCK_TYPE" => "site_content",
-                          "FIELD_CODE" => [
-                                  0 =>"NAME",
-                          ],
-                          "PROPERTY_CODE" => [
-                                  0=>"UF_SUBTITLE",
-                          ],
-
-                          "BUTTONS_COUNT" => "1",
-
-                          'BTN1_TEXT' => 'Связаться с нами',
-                          'BTN1_LINK' => '/contacts/',
-                          'BTN1_ICON_MODIFIER' => 'envelope',
-                  )
-          );?>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="mb-3">
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+        </div>
+        <p class="card-text">"После запуска нашего интернет-магазина продажи выросли в 2.5 раза! Техническая поддержка работает оперативно, всегда готовы помочь. Рекомендую!"</p>
+        <div class="mt-3">
+          <strong>Мария Волкова</strong><br>
+          <small class="text-muted">Владелец сети магазинов</small>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="mb-3">
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+        </div>
+        <p class="card-text">"Профессиональный подход на всех этапах: от аналитики до запуска. CRM-система полностью закрыла наши потребности и автоматизировала продажи."</p>
+        <div class="mt-3">
+          <strong>Игорь Петренко</strong><br>
+          <small class="text-muted">Руководитель отдела продаж</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container text-center">
+  <?php
+  $APPLICATION->IncludeComponent(
+          "bitrix:news.detail",
+          "sta",
+          Array(
+                  "ELEMENT_ID" => "55",
+                  "IBLOCK_ID" => "9",
+                  "IBLOCK_TYPE" => "site_content",
+                  "FIELD_CODE" => [
+                          0 =>"NAME",
+                  ],
+                  "PROPERTY_CODE" => [
+                          0=>"UF_SUBTITLE",
+                  ],
+
+                  "BUTTONS_COUNT" => "1",
+
+                  'BTN1_TEXT' => 'Связаться с нами',
+                  'BTN1_LINK' => '/contacts/',
+                  'BTN1_ICON_MODIFIER' => 'envelope',
+          )
+  );?>
+</div>
+</section>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
