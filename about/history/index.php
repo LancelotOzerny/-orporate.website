@@ -29,188 +29,59 @@ $APPLICATION->SetTitle("История компании");
   </div>
 </section>
 
-<!-- Timeline Section -->
 <section class="section bg-light">
-  <div class="container">
-    <h2 class="section_title">Основные вехи</h2>
-    <div class="timeline">
-      <!-- 2011 -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <div class="timeline-year">2011</div>
-              <h3>Основание компании</h3>
-              <p>Александр Петров основал компанию в Ростове-на-Дону. Первый офис — небольшое помещение на 3 человека. Первый проект — корпоративный сайт для местной производственной компании.</p>
-              <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle text-primary me-2"></i>3 сотрудника в команде</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Первые 5 клиентов</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Фокус на малый бизнес</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="2011" class="img-fluid rounded shadow">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2013 -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="row align-items-center">
-            <div class="col-md-6 order-md-2">
-              <div class="timeline-year">2013</div>
-              <h3>Первая сертификация 1С-Битрикс</h3>
-              <p>Получили статус сертифицированного партнера 1С-Битрикс. Команда выросла до 10 человек. Реализовали первый крупный корпоративный портал для федеральной компании.</p>
-              <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Статус партнера Битрикс</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>10 сотрудников</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Выход на федеральный уровень</li>
-              </ul>
-            </div>
-            <div class="col-md-6 order-md-1">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" alt="2013" class="img-fluid rounded shadow">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2015 -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <div class="timeline-year">2015</div>
-              <h3>Расширение географии</h3>
-              <p>Открыли представительство в Москве. Начали работу с клиентами из других регионов России. Запустили собственную линейку готовых решений для автоматизации бизнеса.</p>
-              <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Офис в Москве</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>25 сотрудников</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>50+ реализованных проектов</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" alt="2015" class="img-fluid rounded shadow">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2017 -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="row align-items-center">
-            <div class="col-md-6 order-md-2">
-              <div class="timeline-year">2017</div>
-              <h3>Премия «Лучший интегратор года»</h3>
-              <p>Получили награду от 1С-Битрикс как «Лучший интегратор года» в ЮФО. Реализовали более 100 проектов. Внедрили систему круглосуточной технической поддержки.</p>
-              <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Премия «Лучший интегратор»</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>100+ завершенных проектов</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Техподдержка 24/7</li>
-              </ul>
-            </div>
-            <div class="col-md-6 order-md-1">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="2017" class="img-fluid rounded shadow">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2019 -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <div class="timeline-year">2019</div>
-              <h3>Запуск облачных решений</h3>
-              <p>Начали разработку и внедрение облачных корпоративных порталов. Получили сертификацию по информационной безопасности ISO 27001. Команда достигла 40 специалистов.</p>
-              <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Облачные решения</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Сертификат ISO 27001</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>40 сотрудников</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop" alt="2019" class="img-fluid rounded shadow">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2021 -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="row align-items-center">
-            <div class="col-md-6 order-md-2">
-              <div class="timeline-year">2021</div>
-              <h3>Инновации и интеграции</h3>
-              <p>Внедрили AI-решения для автоматизации бизнес-процессов. Начали интеграцию с популярными CRM и ERP-системами. Запустили программу обучения для клиентов.</p>
-              <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle text-primary me-2"></i>AI-технологии</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Интеграции с CRM/ERP</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Учебный центр для клиентов</li>
-              </ul>
-            </div>
-            <div class="col-md-6 order-md-1">
-              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop" alt="2021" class="img-fluid rounded shadow">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2023 -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <div class="timeline-year">2023</div>
-              <h3>Топ-10 интеграторов России</h3>
-              <p>Вошли в топ-10 крупнейших интеграторов корпоративных решений в России по версии РБК. Реализовали более 500 проектов. Открыли собственный R&amp;D центр.</p>
-              <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Топ-10 интеграторов РФ</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>500+ проектов</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>R&amp;D центр</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" alt="2023" class="img-fluid rounded shadow">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 -->
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="row align-items-center">
-            <div class="col-md-6 order-md-2">
-              <div class="timeline-year">2026</div>
-              <h3>Сегодня</h3>
-              <p>Команда из 50+ специалистов. Лидер рынка корпоративных IT-решений в ЮФО. Работаем с крупнейшими компаниями России. Развиваем собственные инновационные продукты.</p>
-              <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle text-primary me-2"></i>50+ профессионалов</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Лидер рынка в ЮФО</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Собственные продукты</li>
-              </ul>
-            </div>
-            <div class="col-md-6 order-md-1">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="2026" class="img-fluid rounded shadow">
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container">
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:news.list",
+            "history",
+            Array(
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "ADD_SECTIONS_CHAIN" => "Y",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "CHECK_DATES" => "Y",
+                "COMPONENT_TEMPLATE" => "history",
+                "DETAIL_URL" => "",
+                "DISPLAY_BOTTOM_PAGER" => "Y",
+                "DISPLAY_TOP_PAGER" => "N",
+                "FIELD_CODE" => [0=>"",1=>"",],
+                "FILTER_NAME" => "",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                "IBLOCK_ID" => "12",
+                "IBLOCK_TYPE" => "site_content",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "MESSAGE_404" => "",
+                "NEWS_COUNT" => "20",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_TEMPLATE" => ".default",
+                "PROPERTY_CODE" => [0=>"UF_YEAR",1=>"ACHIEVEMENT_1",2=>"ACHIEVEMENT_2",3=>"ACHIEVEMENT_3",4=>"",],
+                "SET_BROWSER_TITLE" => "Y",
+                "SET_LAST_MODIFIED" => "N",
+                "SET_META_DESCRIPTION" => "Y",
+                "SET_META_KEYWORDS" => "Y",
+                "SET_STATUS_404" => "N",
+                "SET_TITLE" => "Y",
+                "SHOW_404" => "N",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER1" => "DESC",
+                "SORT_ORDER2" => "ASC",
+                "STRICT_SECTION_CHECK" => "N"
+            )
+        );?>
     </div>
-  </div>
 </section>
 
 <section class="section">
